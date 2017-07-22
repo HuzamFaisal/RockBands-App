@@ -1,0 +1,30 @@
+
+h1 {
+  font-size:39px;
+  font-weight:bold;
+  text-align:left; 
+  font-family:Verdana;
+  margin-bottom:5; 
+  color:#600000;
+}
+
+
+
+nav a {
+  padding: 5px 10px;
+  text-decoration: none;
+  margin-top: 10px;
+  display: inline-block;
+  background-color: #eee;
+  border-radius: 4px;
+}
+nav a:visited, a:link {
+  color: #600000;
+}
+nav a:hover {
+  color: #600000;
+  background-color: #CFD8DC;
+}
+nav a.active {
+  color: #600000;
+}

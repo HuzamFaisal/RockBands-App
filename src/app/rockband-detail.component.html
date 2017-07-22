@@ -1,0 +1,21 @@
+<div *ngIf="rockband">
+  <br>
+  <h2>Details Of {{rockband.name}} !</h2>
+  <div>
+    <label>ID: </label>{{rockband.id}}</div>
+  <div>
+    <label>Name: </label>
+    <input [(ngModel)]="rockband.name" placeholder="name" />
+   </div>
+
+
+   <div>
+
+     <label>Image: </label> 
+    
+     <img class="card-img-top" src="{{rockband.image}}" width="300px" height="300px">
+         
+   </div>
+    <button (click)="goBack()">Back</button>
+  <button (click)="save()">Save</button>
+</div>

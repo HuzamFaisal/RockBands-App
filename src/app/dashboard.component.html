@@ -1,0 +1,21 @@
+<br>
+<h3>Top Rock Bands</h3>
+<br>
+
+<div class="rockband-list-container">
+<div class="card-deck">
+
+  <a *ngFor="let rockband of rockbands"  [routerLink]="['/detail', rockband.id]"  class="col-md-4 col-sm-8 ">
+    <div class="card">
+      <img class="card-img-top" src="{{rockband.image}}" alt="Card image cap" width="397" height="350">
+    <div class="card-block">
+
+     <p class="card-title text-muted">{{rockband.name}}</p>
+
+    </div>
+    </div>
+  </a>
+
+</div>
+
+<rockband-search></rockband-search>

@@ -1,0 +1,35 @@
+
+<br>
+<h2>My Favourite Rock Bands</h2>
+<br>
+
+  <label>Rock Band Name:</label> <input #rockbandName />
+  <button (click)="add(rockbandName.value); rockbandName.value=''">
+    Add
+  </button>
+
+<br>
+<br>
+
+<div class = "row">
+
+<div class = "col-md-4">
+
+<ul class="list-group">
+  <li class="list-group-item justify-content-between" *ngFor="let rockband of rockbands" (click)="onSelect(rockband)"
+      [class.selected]="rockband === selectedRockband">
+    <span class="badge badge-default badge-pil">{{rockband.id}}</span>
+    <span>{{rockband.name}}</span>
+    <button type="button" class="btn btn-danger"
+      (click)="delete(rockband); $event.stopPropagation()">X</button>
+  </li>
+</ul>
+</div>
+
+<div *ngIf="selectedRockband">
+    <h2>
+    {{selectedRockband.name | uppercase}} Is My Favourite Rock Band
+    </h2>
+  <button class="btn btn-info" (click)="gotoDetail()">View Details</button>
+</div>
+</div>
